@@ -30,14 +30,32 @@
         .borderridge{
             border-style: ridge;
         }
+
+        .paddingClass{
+            padding: 80px;
+            padding-top:0px;
+            padding-left:0px;
+            padding-right:0px;
+            padding-bottom:0px;
+        }
+
+        .marginClass{
+            margin-top: 80px;
+            margin-left: 80px;
+            margin-right: 80px;
+            margin-bottom: 80px;
+        }
     </style>
 </head>
 <body>
-    <div class="borderridge">
+    <div class="borderridge paddingClass">
         Border Dotted
     </div>
-    <div class="borderDashed">
+    <div class="borderDashed marginClass">
         Border Dashed
+    </div>
+    <div class="borderDashed marginClass paddingClass">
+        Margin+padding
     </div>
 
 </body>
