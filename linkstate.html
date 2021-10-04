@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Link State</title>
     <style>
-        a:link, a:visited{
+        a:link.btn.btn-primary, a:visited.btn.btn-primary{
             color: black;
             text-decoration: none;
             background-color: white;
@@ -16,13 +16,13 @@
             display: inline-block;
         }
         
-        a:hover{
+        a:hover.btn.btn-primary{
             color: white;
             background-color: blue;
             cursor: pointer;
         }
         
-        a:active{
+        a:active.btn.btn-primary{
             color: white;
             background-color: rgb(0, 0, 119);
             cursor: pointer;
@@ -35,7 +35,40 @@
     3) :hover <br>
     4) :active <br>
     <br>
-    <a href="#">Klik Di sini</a> 
-    <a href="http://google.com">Google</a>
+    <a class="btn btn-primary" href="#">Klik Di sini</a> 
+    <a class="btn btn-primary" href="http://google.com">Google</a>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $('.btn').click(function (e) { 
+            e.preventDefault();
+            swal({
+                title: "Are you sure?",
+                text: "You will not be able to recover this demand point again!",
+                icon: "warning",
+                buttons: {cancel: {
+                    text: "Cancel",
+                    value: null,
+                    visible: true,
+                    className: "",
+                    closeModal: true,
+                },
+                confirm: {
+                    text: "Yes, i'm sure!",
+                    value: true,
+                    visible: true,
+                    className: "btn-danger",
+                    closeModal: true
+                }}
+            }).then((value)=>{
+                if(value){
+                    swal("Deleted!", "The demand point file has been deleted successfully.", "success");
+                }
+            });
+        });
+        
+    </script>
 </body>
 </html>
