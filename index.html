@@ -35,19 +35,31 @@
             text-decoration: underline;
         }
 
+        .mysecondpara>.mysecondclass{
+            background-color: black;
+            color: white;
+        }
+        
+        /*
+            1) #mypara.mysecondpara  -> element id mypara dan class mysecondpara
+            2) .mysecondclass.mysecondpara -> element with both classes
+            3) .mysecondclass, .mysecondpara -> element with both either 1 class
+            4) .mysecondclass>.mysecondpara -> child element with .mysecondpara having parent element with .mysecondclass class
+        */
+
     </style>
 </head>
 <body>
 
     <table style="background-color:red; width:100%">
-        <tr style="height:50px">
-            <td>1</td>
+        <tr style="height:50px" class="mysecondpara">
+            <td class="mysecondclass">1</td>
             <td>2</td>
             <td>3</td>
         </tr>
     </table>
 
-    <p id="mypara" class="mysecondpara">Mari belajar CSS</p>
+    <p id="mypara" class="mysecondpara mysecondclass">Mari belajar CSS</p>
     <p class="mysecondpara myclass mysecondclass">Belajar CSS sangat menarik</p>
     <p class="myclass">Belajar CSS sangat menarik</p>
     <p class="myclass mysecondclass">Belajar CSS sangat menarik</p>
