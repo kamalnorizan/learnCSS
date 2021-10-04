@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading Style Sheets</title>
+    <style>
+        /*css Selector*/
+
+        /* element */
+        body{
+            background-color: yellow;
+        }
+
+        p{
+            font-weight: bold;
+        }
+
+        td{
+            padding:20px;
+        }
+
+        /*id selector*/
+        #mypara{
+            font-size: large;
+        }
+       
+
+        /*class selector*/
+        .myclass{
+            font-style: italic;
+            color: blue;
+        }
+
+        .mysecondpara{
+            color: red;
+        }
+
+        .mysecondclass{
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <table style="background-color:red; width:100%">
+        <tr style="height:50px">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <p id="mypara" class="mysecondpara">Mari belajar CSS</p>
+    <p class="mysecondpara myclass mysecondclass">Belajar CSS sangat menarik</p>
+    <p class="myclass">Belajar CSS sangat menarik</p>
+    <p class="myclass mysecondclass">Belajar CSS sangat menarik</p>
+    <p class="myclass">Belajar CSS sangat menarik</p>
+    <p class="myclass mysecondclass">Belajar CSS sangat menarik</p>
+</body>
+</html>
