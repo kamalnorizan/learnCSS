@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page{
+    display: flex;
+    flex-wrap: wrap
+}
+
+.section{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    background-color: #CF8A23;
+    height: 80px;
+}
+
+.header{
+    background-color: #5995DA;
+}
+
+.content{
+    background-color: #B2D6FF;
+    height: 600px;
+}
+
+.sign-up{
+    background-color: #EAEDF0;
+}
+
+.feature1{
+    background-color: #D6E9FE;
+}
+
+.feature2{
+    background-color: #FF7FA5;
+}
+
+.feature3{
+    background-color: #259E0D;
+}
+
+/*Mobile styles*/
+@media only screen and (max-width: 400px) {
+    body{
+        background-color: red;
+    }
+}
+
+/*Tablet styles*/
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body{
+        background-color: yellow;
+    }
+
+    .sign-up,
+    .feature1,
+    .feature2,
+    .feature3{
+        width: 50%;
+    }
+}
+
+/*Desktop styles*/
+@media only screen and (min-width: 961px) {
+    body{
+        background-color: blue;
+    }
+
+    .page{
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    .header{
+        height: 400px;
+    }
+
+    .feature1,
+    .feature2,
+    .feature3{
+        width: 33.33%;
+    }
+
+
+    .sign-up{
+        order: 1;
+        height: 180px;
+    }
+
+    .content{
+        order: 2;
+    }
+}
