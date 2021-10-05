@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Layout</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .content {
+            background-color: #868686;
+            height: 450px;
+        }
+    </style>
     <script>
+        document.onreadystatechange = () =>{
+            var para = document.getElementsByClassName('myname');
+            for(let i=0; i < para.length;i++){
+                para[i].innerHTML='This is paragraph ' + i; 
+            }
+
+        }
+        
         function runalert(){
             alert('Welcome to Javascript world');
         }
@@ -16,7 +30,8 @@
         }
 
         function writemyname(){
-            document.getElementById('theParagraph1').innerHTML='Ahmad Kamal B Norizan';
+            var writemyname2_btn = document.getElementById('writemyname2_btn');
+            writemyname2_btn.click();
         }
 
         function writemyname2(){
@@ -43,7 +58,7 @@
                 <p id="theParagraph2" class="myname"></p>
                 <p id="theParagraph3" class="myname"></p>
                 <button onclick="writemyname()">What is my name?</button>
-                <button onclick="writemyname2()">What is my name? (by class)</button>
+                <button id="writemyname2_btn" onclick="writemyname2()">What is my name? (by class)</button>
             </div>
         </div>
         <div class="section sign-up">
