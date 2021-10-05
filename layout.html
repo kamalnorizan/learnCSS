@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Layout</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        function runalert(){
+            alert('Welcome to Javascript world');
+        }
 
+        function disablerunalert(){
+            document.getElementById('runalert_btn').disabled=true;
+        }
+    </script>
 </head>
 <body>
     <div class="page">
@@ -14,7 +22,8 @@
             <h2>Menu</h2>
         </div>
         <div class="section header">
-            <h2>Header</h2>
+            <button id="runalert_btn" type="button" onclick="runalert()">Run Alert</button>
+            <button id="runalert_btn" type="button" onclick="disablerunalert()">Disable Run Alert Button</button>
         </div>
         <div class="section content">
             <h2>Content</h2>
