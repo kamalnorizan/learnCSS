@@ -18,6 +18,13 @@
         function writemyname(){
             document.getElementById('theParagraph1').innerHTML='Ahmad Kamal B Norizan';
         }
+
+        function writemyname2(){
+            var x = document.getElementsByClassName('myname');
+            x[0].innerHTML='Ahmad Kamal 0';
+            x[1].innerHTML='Ahmad Kamal 1';
+            x[2].innerHTML='Ahmad Kamal 2';
+        }
     </script>
 </head>
 <body>
@@ -32,10 +39,11 @@
         <div class="section content">
             <div class="full">
                 <h2>DOM</h2>
-                <p id="theParagraph1"></p>
-                <p id="theParagraph2"></p>
-                <p id="theParagraph3"></p>
+                <p id="theParagraph1" class="myname"></p>
+                <p id="theParagraph2" class="myname"></p>
+                <p id="theParagraph3" class="myname"></p>
                 <button onclick="writemyname()">What is my name?</button>
+                <button onclick="writemyname2()">What is my name? (by class)</button>
             </div>
         </div>
         <div class="section sign-up">
