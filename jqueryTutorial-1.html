@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script>
+        /*document.onreadystatechange = ()=>{
+            var total = 0;
+            setInterval(function(){
+                total = parseInt(total+1);
+                document.getElementsByClassName('myname')[0].innerHTML = total;
+            },2000);
+        }*/
+    </script>
+</head>
+<body>
+    
+    <div id="myname">Test 123</div>
+    <div id="hideme">Click here to hide me</div>
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $('#myname').html(1);
+        setInterval(function(){
+            var vals=$('#myname').text();
+            $('#myname').html(parseInt(vals)+parseInt(1));
+        },1000);
+    });
+
+    $('#hideme').click(function (e) { 
+        e.preventDefault();
+        $(this).hide();
+    });
+    
+    var a = 'Selamat  ';
+    var b = 'Petang';
+
+    alert(a+' '+b);
+
+</script>
+</body>
+</html>
